@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body class="bg-gray-500">
+    <div class="space-y-12 text-center mt-[100px] border-solid border-black border-2">
+    <form action="/update/<%= edituser._id %>" method="post">
+        <label for="" class="text-center text-white mb-5 mt-5 block">edit</label>
+        <div class="">
+            <label for="" class="text-white">enter your name :- </label>
+        <input type="text" name="name" id="" placeholder="enter name" value="<%= edituser.name %>">
+        </div>
+        <div class="mt-5">
+            <label for="" class="text-white">enter your email :- </label>
+        <input type="text" name="email" id="" placeholder="enter email" value="<%= edituser.email %>">
+        </div>
+        <div class="mt-5 mb-5">
+        <input type="submit" name="" id="" value="submit" class="bg-black rounded text-white px-10 py-3">
+        </div>
+    </form>
+    </div>
+</body>
+</html>
