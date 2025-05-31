@@ -14,7 +14,7 @@ app.get("/", (req,res) => {
     res.render("index");
 })
 app.post("/create", async function(req,res){
-    let {name,email,file} = req.body;
+    let {name,email} = req.body;
     let usercreat = await usermodel.create({
         name : name,
         email : email
@@ -35,7 +35,7 @@ app.get("/edit/:userid", async (req,res) => {
 })
 app.post("/update/:userid", async (req,res) => {
     let {name,email,file} = req.body;
-    let updateuser = await usermodel.findOneAndUpdate({_id : req.params.userid},{name,email,photo : file},{new : true});
+    let updateuser = await usermodel.findOneAndUpdate({_id : req.params.userid},{name,email},{new : true});
     res.redirect("/show");
 })
 app.listen(port);
